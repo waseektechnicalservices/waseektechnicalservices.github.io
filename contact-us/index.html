@@ -106,6 +106,22 @@ gtag("config", "GT-5D9RPW4N");
 <link rel="icon" href="../wp-content/uploads/2023/02/cropped-waseek-logo-1-1-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../wp-content/uploads/2023/02/cropped-waseek-logo-1-1-180x180.png" />
 <meta name="msapplication-TileImage" content="https://waseekmechanicalservices.com/wp-content/uploads/2023/02/cropped-waseek-logo-1-1-270x270.png" />
+
+<script>
+      var isNS = (navigator.appName == "PN") ? 1 : 0;
+      if(navigator.appName == "PN") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+      function mischandler(){
+      return false;
+      }
+      function mousehandler(e){
+      var myevent = (isNS) ? e : event;
+      var eventbutton = (isNS) ? myevent.which : myevent.button;
+      if((eventbutton==2)||(eventbutton==3)) return false;
+      }
+      document.oncontextmenu = mischandler;
+      document.onmousedown = mousehandler;
+      document.onmouseup = mousehandler;
+      </script>
 </head>
 
 <body class="page-template-default page page-id-200 ehf-header ehf-footer ehf-template-hello-elementor ehf-stylesheet-hello-elementor elementor-default elementor-kit-15 elementor-page elementor-page-200">
